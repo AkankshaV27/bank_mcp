@@ -2,8 +2,9 @@ import asyncio, os
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.prebuilt import create_react_agent
 from langchain.chat_models import init_chat_model
+from dotenv import load_dotenv
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyBK26hJhmxDzI-GE7srGIgPa-ZNT_hH3yI"
+load_dotenv()
 
 llm = init_chat_model("google_genai:gemini-2.0-flash")
 
